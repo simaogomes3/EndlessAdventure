@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listeners
+    // Event listeners for carousel
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -198,4 +198,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize carousel
     updateDots();
     updateCarousel();
+
+    // About section "Saber Mais" functionality
+    const saberMaisBtn = document.getElementById('saberMaisBtn');
+    const historia = document.getElementById('historia');
+
+    saberMaisBtn.addEventListener('click', () => {
+        saberMaisBtn.classList.toggle('active');
+        historia.classList.toggle('active');
+    });
 }); 
