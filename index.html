@@ -19,8 +19,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#shop">Loja</a></li>
                 <li><a href="#activities">Atividades</a></li>
+                <li><a href="#shop">Loja</a></li>
                 <li><a href="#partners">Parceiros</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -195,24 +195,173 @@
             <h2>Nossas Atividades</h2>
             <div class="activities-grid">
                 <div class="activity-card">
-                    <i class="fas fa-sun"></i>
-                    <h3>Verão</h3>
-                    <p>Descubra aventuras emocionantes sob o sol do Algarve. Atividades aquáticas, passeios de barco, e experiências únicas para tornar seu verão inesquecível.</p>
-                    <a href="#contact" class="activity-button">Agendar</a>
+                    <i class="fas fa-child"></i>
+                    <h3>Kids Club</h3>
+                    <p>Um espaço dedicado ao entretenimento das crianças dos 4 aos 12 anos, com atividades supervisionadas e incluídas na estadia.</p>
+                    <button class="activity-button" data-target="kids-details">Saber Mais</button>
                 </div>
 
                 <div class="activity-card">
                     <i class="fas fa-snowflake"></i>
                     <h3>Inverno</h3>
-                    <p>Explore a beleza tranquila do Algarve no inverno. Caminhadas pela natureza, observação de aves e experiências culturais autênticas.</p>
-                    <a href="#contact" class="activity-button">Agendar</a>
+                    <p>Atividades especiais durante o Natal e Ano Novo, com programação dedicada para toda a família.</p>
+                    <button class="activity-button" data-target="winter-details">Saber Mais</button>
+                </div>
+
+                <div class="activity-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Verão</h3>
+                    <p>Experiências refrescantes e dinâmicas, incluindo atividades aquáticas e entretenimento ao ar livre.</p>
+                    <button class="activity-button" data-target="summer-details">Saber Mais</button>
                 </div>
 
                 <div class="activity-card">
                     <i class="fas fa-egg"></i>
                     <h3>Páscoa</h3>
-                    <p>Celebre a Páscoa com atividades especiais para toda a família. Caças ao tesouro, workshops tradicionais e momentos únicos em família.</p>
-                    <a href="#contact" class="activity-button">Agendar</a>
+                    <p>Programação especial com atividades temáticas e entretenimento para todas as idades.</p>
+                    <button class="activity-button" data-target="easter-details">Saber Mais</button>
+                </div>
+            </div>
+
+            <div class="activity-details" id="kids-details">
+                <h3>Kids Club</h3>
+                <p>O nosso departamento de Kids Club é um espaço dedicado ao entretenimento das crianças, com atividades como artesanato, jogos e brincadeiras supervisionadas pelos nossos monitores.</p>
+                <ul class="details-list">
+                    <li><strong>Idade:</strong> 4 aos 12 anos</li>
+                    <li><strong>Inclusão:</strong> Incluído na estadia dos hotéis</li>
+                    <li><strong>Segurança:</strong> Ambiente seguro e bem equipado</li>
+                    <li><strong>Supervisão:</strong> Monitores qualificados</li>
+                </ul>
+            </div>
+
+            <div class="activity-details" id="winter-details">
+                <h3>Atividades de Inverno</h3>
+                <div class="activities-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Descrição</th>
+                                <th>Duração</th>
+                                <th>Local</th>
+                                <th>Monitores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Caça ao Tesouro Natalício</td>
+                                <td>Procura de presentes e objetos temáticos com pistas pelo hotel</td>
+                                <td>1h</td>
+                                <td>Jardim</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Bingo de Natal</td>
+                                <td>Bingo temático com prêmios</td>
+                                <td>1h</td>
+                                <td>Sala de Atividades</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Montagem do Presépio</td>
+                                <td>Atividade tradicional natalícia</td>
+                                <td>1h</td>
+                                <td>Sala de Atividades</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Oficina de Biscoitos</td>
+                                <td>Preparação de biscoitos natalícios</td>
+                                <td>2h</td>
+                                <td>Sala de Atividades</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="activity-details" id="summer-details">
+                <h3>Atividades de Verão</h3>
+                <div class="activities-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Descrição</th>
+                                <th>Local</th>
+                                <th>Monitores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coreografia na Água</td>
+                                <td>Aulas de dança aquática com música</td>
+                                <td>Piscina</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Voleibol</td>
+                                <td>Jogo dinâmico na piscina</td>
+                                <td>Piscina</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Torneio de Castelos de Areia</td>
+                                <td>Competição criativa na praia</td>
+                                <td>Praia</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Workshop de Culinária</td>
+                                <td>Preparação de receitas simples</td>
+                                <td>Cozinha</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="activity-details" id="easter-details">
+                <h3>Atividades de Páscoa</h3>
+                <div class="activities-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Descrição</th>
+                                <th>Local</th>
+                                <th>Monitores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Caça aos Ovos</td>
+                                <td>Procura de ovos escondidos pelo hotel</td>
+                                <td>Jardim</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Corrida de Ovo na Colher</td>
+                                <td>Competição de equilíbrio</td>
+                                <td>Jardim</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Oficina de Biscoitos</td>
+                                <td>Decoração de biscoitos temáticos</td>
+                                <td>Sala de Atividades</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Teatro de Fantoches</td>
+                                <td>Criação e apresentação de fantoches</td>
+                                <td>Sala de Atividades</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -265,7 +414,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>info@endlessadventure.pt</p>
+                        <p>endlessadventure355@gmail.com</p>
                     </div>
                 </div>
                 <form class="contact-form">

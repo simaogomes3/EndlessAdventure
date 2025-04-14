@@ -207,4 +207,25 @@ document.addEventListener('DOMContentLoaded', function() {
         saberMaisBtn.classList.toggle('active');
         historia.classList.toggle('active');
     });
+
+    // Activity Details Toggle
+    const activityButtons = document.querySelectorAll('.activity-button');
+    const activityDetails = document.querySelectorAll('.activity-details');
+
+    activityButtons.forEach((button, index) => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Hide all details sections first
+            activityDetails.forEach(detail => {
+                detail.classList.remove('active');
+            });
+
+            // Show the clicked activity's details
+            activityDetails[index].classList.add('active');
+
+            // Smooth scroll to the details section
+            activityDetails[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
 }); 
