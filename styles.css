@@ -679,9 +679,61 @@ h2::after {
 }
 
 /* Responsive Design */
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+}
+
 @media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+
     .shop-item {
         flex: 0 0 calc((100% - 30px) / 2);
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-content {
+        gap: 40px;
+    }
+
+    .values-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -716,11 +768,29 @@ h2::after {
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
     }
 
     .about-content {
-        flex-direction: column;
+        gap: 30px;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .contact-content {
@@ -744,5 +814,115 @@ h2::after {
     .carousel-control {
         width: 35px;
         height: 35px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .mission-vision h3 {
+        font-size: 1.6rem;
+    }
+
+    .mission-vision p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+
+    .about {
+        padding: 80px 0;
+    }
+
+    .shop {
+        padding: 80px 0;
+    }
+
+    .activities {
+        padding: 80px 0;
+    }
+
+    .partners {
+        padding: 80px 0;
+    }
+
+    .contact {
+        padding: 80px 0;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-item {
+        min-width: 250px;
+    }
+
+    .shop-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .shop-content p {
+        font-size: 1rem;
+    }
+
+    .shop-price {
+        padding: 6px 15px;
+    }
+
+    .shop-price .price {
+        font-size: 1.1em;
+    }
+
+    .activity-card {
+        padding: 30px;
+    }
+
+    .activity-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .activity-card p {
+        font-size: 1rem;
+    }
+
+    .activity-button {
+        padding: 10px 25px;
+        font-size: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+    }
+
+    .submit-button {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer-logo h2 {
+        font-size: 1.8rem;
     }
 } 
