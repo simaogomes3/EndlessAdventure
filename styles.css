@@ -1,12 +1,18 @@
 :root {
-    --primary-blue: #0a1a3a;
-    --secondary-blue: #1a2a4a;
-    --gold: #c5a47e;
-    --light-gold: #d4b99a;
+    --primary-color: #1e3799;
+    --secondary-color: #4a69bd;
+    --accent-color: #ffa801;
+    --gradient-start: #0c2461;
+    --gradient-end: #1e3799;
+    --hover-color: #ffa801;
+    --primary-blue: #0c2461;
+    --secondary-blue: #1e3799;
+    --gold: #ffa801;
+    --light-gold: #ffd32a;
     --white: #ffffff;
-    --light-gray: #f8f8f8;
-    --dark-gray: #2a2a2a;
-    --text-gray: #666666;
+    --light-gray: #f8f9fa;
+    --dark-gray: #2c3e50;
+    --text-gray: #34495e;
 }
 
 * {
@@ -125,14 +131,15 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(10, 26, 58, 0.3), rgba(10, 26, 58, 0.3)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background: linear-gradient(rgba(12, 36, 97, 0.8), rgba(30, 55, 153, 0.8)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: white;
     padding-top: 80px;
 }
 
@@ -178,7 +185,7 @@ nav {
 /* About Section */
 .about {
     padding: 120px 0;
-    background-color: var(--light-gray);
+    background-color: #f8f9fa;
 }
 
 .about-content {
@@ -269,25 +276,21 @@ nav {
 }
 
 .values-list li {
+    color: white !important;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+    margin: 10px 0;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    padding: 15px;
-    background-color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.values-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .values-list i {
-    color: var(--gold);
-    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-right: 15px;
+    flex-shrink: 0;
 }
 
 .about-image {
@@ -312,7 +315,7 @@ nav {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     padding: 0 60px;
 }
 
@@ -321,7 +324,6 @@ nav {
     transition: transform 0.3s ease;
     gap: 30px;
     padding: 20px 0 40px 0;
-    width: 100%;
 }
 
 .shop-item {
@@ -329,11 +331,12 @@ nav {
     flex: 0 0 calc((100% - 60px) / 3);
     min-width: 300px;
     background: white;
-    border-radius: 10px;
-    overflow: visible;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
     margin-bottom: 30px;
+    border-bottom: 4px solid var(--accent-color);
 }
 
 .shop-image {
@@ -374,6 +377,7 @@ nav {
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
+    opacity: 0.8;
 }
 
 .carousel-control.prev {
@@ -385,8 +389,8 @@ nav {
 }
 
 .carousel-control:hover {
-    background: var(--gold);
-    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+    background: var(--accent-color);
 }
 
 .carousel-dots {
@@ -400,23 +404,26 @@ nav {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ccc;
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .dot.active {
-    background: #007bff;
+    background: var(--accent-color);
     transform: scale(1.2);
 }
 
 .shop-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: 4px solid var(--light-gold);
 }
 
 .shop-content {
     padding: 20px;
+    padding-bottom: 60px;
+    position: relative;
 }
 
 .shop-content h3 {
@@ -436,19 +443,22 @@ nav {
 
 .shop-price {
     position: absolute;
-    bottom: -25px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary-blue);
+    background: var(--accent-color);
     color: white;
-    padding: 8px 20px;
+    padding: 10px 25px;
     border-radius: 25px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 
-.shop-price .price {
-    font-size: 1.2em;
+.shop-item:hover .shop-price {
+    background: var(--light-gold);
+    transform: scale(1.05);
 }
 
 .duration {
@@ -488,28 +498,41 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     margin-top: 60px;
+    align-items: stretch;
 }
 
 .activity-card {
-    background-color: var(--white);
+    background: white;
     padding: 40px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    border-bottom: 4px solid var(--accent-color);
+    height: 100%;
 }
 
 .activity-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: 4px solid var(--light-gold);
 }
 
 .activity-card i {
-    font-size: 3rem;
-    color: var(--gold);
+    color: var(--accent-color);
+    font-size: 2.5em;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover i {
+    transform: scale(1.1);
+    color: var(--light-gold);
 }
 
 .activity-card h3 {
@@ -527,25 +550,19 @@ nav {
 }
 
 .activity-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--primary-blue);
-    color: var(--white);
-    text-decoration: none;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
     border-radius: 25px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 600;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    border: 2px solid var(--primary-blue);
-    cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .activity-button:hover {
-    background-color: var(--gold);
-    color: var(--white);
-    border-color: var(--gold);
+    background: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -593,6 +610,10 @@ nav {
 .activities-table {
     overflow-x: auto;
     margin-top: 30px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .activities-table table {
@@ -610,16 +631,17 @@ nav {
 }
 
 .activities-table th {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background: var(--primary-blue);
+    color: white;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.9rem;
     letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 15px 20px;
 }
 
 .activities-table tr:hover {
-    background-color: rgba(197, 164, 126, 0.1);
+    background-color: rgba(255, 168, 1, 0.1);
 }
 
 .activities-table td {
@@ -641,7 +663,7 @@ nav {
 /* Partners Section */
 .partners {
     padding: 120px 0;
-    background-color: var(--white);
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
 }
 
 .partners-grid {
@@ -655,9 +677,10 @@ nav {
 .partner-logo {
     text-align: center;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background-color: white;
     height: 120px;
     display: flex;
     align-items: center;
@@ -666,7 +689,7 @@ nav {
 
 .partner-logo:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .partner-logo img {
@@ -684,7 +707,27 @@ nav {
 /* Contact Section */
 .contact {
     padding: 120px 0;
-    background-color: var(--light-gray);
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-content {
@@ -714,7 +757,7 @@ nav {
 
 .contact-item p {
     font-size: 1.2rem;
-    color: var(--text-gray);
+    color: white !important;
     line-height: 1.6;
 }
 
@@ -726,18 +769,20 @@ nav {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
     font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--gold);
+    background: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .contact-form textarea {
@@ -746,35 +791,51 @@ nav {
 }
 
 .submit-button {
-    padding: 20px;
-    background-color: var(--primary-blue);
-    color: var(--white);
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-    font-weight: 500;
-    letter-spacing: 2px;
+    background: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
     text-transform: uppercase;
-    transition: background-color 0.3s;
-    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 .submit-button:hover {
-    background-color: var(--secondary-blue);
+    background: var(--light-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    position: relative;
+    overflow: hidden;
+    color: white;
     padding: 3rem 0 1rem;
 }
 
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3') center/cover;
+    opacity: 0.05;
+    z-index: 0;
+}
+
 .footer-content {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
+    align-items: start;
 }
 
 .footer-column {
@@ -806,7 +867,7 @@ footer {
 .footer-column h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--accent-color);
 }
 
 .location-info {
@@ -832,11 +893,18 @@ footer {
     gap: 0.5rem;
     color: var(--white);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin: 5px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .social-links a:hover {
-    color: var(--gold);
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateX(5px);
 }
 
 .social-links i {
@@ -1190,14 +1258,18 @@ h2::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--white);
+    color: white;
     text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 5px 0;
 }
 
 .hotel-link:hover {
-    color: var(--gold);
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 15px;
 }
 
 .hotel-link i {
@@ -1211,10 +1283,10 @@ h2::after {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 .gallery-item {
@@ -1234,6 +1306,7 @@ h2::after {
     height: 300px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .gallery-item:hover img {
